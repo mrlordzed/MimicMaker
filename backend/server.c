@@ -17,15 +17,25 @@ int main(void) {
     socklen_t address_length = sizeof(address);
 
     char request[BUFFER_SIZE];
+    char body[BUFFER_SIZE];
+    char response[BUFFER_SIZE * 2];
 
-    const char *body =
-        "<!doctype html>"
-        "<html><body>"
-        "<h1>Hello from C</h1>"
-        "<p>This response came from a tiny C web server.</p>"
-        "</body></html>";
+    // Read HTML file
+    FILE *html_file = fopen("/mnt/c/projects/MimicMaker/public/main.html", "r");
+    if (html_file == NULL) {
+        perror("fopen");
+        return 1;
+    }
 
-    char response[BUFFER_SIZE];
+    size_t body_length = fread(body, 1, sizeof(body) - 1, html_file);
+    fclose(html_file);
+
+    if (body_length == 0) {
+        fprintf(stderr, "Failed to read HTML file or file is empty\n");
+        return 1;
+    }
+
+    body[body_length] = '\0';
 
     // 1. Create a TCP socket
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
@@ -97,7 +107,7 @@ int main(void) {
             "Connection: close\r\n"
             "\r\n"
             "%s",
-            strlen(body),
+            body_length,
             body
         );
 
