@@ -1,0 +1,22 @@
+<svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        :root {
+            --stroke-width: 10px;
+            --stroke-colour: #000000;
+        }
+    </style>
+    <rect width="246" height="246" x="5" y="5" rx="32" ry="32" fill="#FFFFFF" stroke-width="var(--stroke-width)" stroke="var(--stroke-colour)"/>
+    <rect width="224" height="224" x="16" y="16" rx="24" ry="24" fill="#8080FF"/>
+    <path d="M16 128 L48 128 Z" fill="none" stroke="var(--stroke-colour)" stroke-width="var(--stroke-width)"/>
+    <path d="M208 128 L240 128 Z" fill="none" stroke="var(--stroke-colour)" stroke-width="var(--stroke-width)"/>
+    <path d="M48 64 
+    L48 192
+    L208 64
+    L208 192
+    Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="none"/>
+    <path d="M48 64 
+    L48 192
+    L208 64
+    L208 192
+    Z" fill="none" stroke="var(--stroke-colour)" stroke-width="var(--stroke-width)"/>
+</svg>
