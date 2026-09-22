@@ -19,4 +19,14 @@
     L208 64
     L208 192
     Z" fill="none" stroke="var(--stroke-colour)" stroke-width="var(--stroke-width)"/>
+    <path d="M128 128 L128 32 Z" fill="none" stroke="var(--stroke-colour)" stroke-width="var(--stroke-width)"/>
+    <rect width="56" height="56" x="100" y="24" rx="0" ry="0" fill="#FFFFFF" stroke="var(--stroke-colour)" stroke-width="var(--stroke-width)"/>
+    <!--path d="M116 68 L116 34 L128 68 L140 34 L140 68" fill="none" stroke="#8080FF" stroke-width="6"/-->
+    <path d="M116 68 L116 34 L128 68 L140 34 L140 68" 
+      fill="none" 
+      stroke="#8080FF" 
+      stroke-width="6" 
+      stroke-linejoin="round" 
+      stroke-linecap="round"/>
+
 </svg>
